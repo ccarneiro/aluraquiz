@@ -36,8 +36,24 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
+        {/* https://metatags.io/ */}
         <title>Alura Quiz</title>
+        <meta name="title" content="Alura Quiz"/>
+        <meta name="description" content="Projeto da imersão React 2 Edição - Nextjs"/>
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://aluraquiz.ccarneiro.vercel.app/"/>
+        <meta property="og:title" content="Alura Quiz"/>
+        <meta property="og:description" content="Projeto da imersão React 2 Edição - Nextjs"/>
         <meta property="og:image" content="https://vercel.com/edb13c85-65ba-4c36-a9dc-fca8a73d9fce"/>
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image"/>
+        <meta property="twitter:url" content="https://aluraquiz.ccarneiro.vercel.app/"/>
+        <meta property="twitter:title" content="Alura Quiz"/>
+        <meta property="twitter:description" content="Projeto da imersão React 2 Edição - Nextjs"/>
+        <meta property="twitter:image" content="https://vercel.com/edb13c85-65ba-4c36-a9dc-fca8a73d9fce"/>
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
