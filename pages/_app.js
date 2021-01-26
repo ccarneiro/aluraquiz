@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import db from '../db.json'
 
@@ -34,6 +35,10 @@ const theme = db.theme /*{
 export default function App({ Component, pageProps }) {
   return (
     <>
+      <Head>
+        <title>Alura Quiz</title>
+        <meta property="og:image" content="https://vercel.com/edb13c85-65ba-4c36-a9dc-fca8a73d9fce"/>
+      </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Component {...pageProps} />
