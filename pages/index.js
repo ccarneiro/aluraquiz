@@ -115,7 +115,7 @@ export default function Home() {
         <Widget>
           <Widget.Content>
             <h2>Quiz da galera</h2>
-            <p>dasjhldkjashdklsalkdas</p>
+            <p>Dá uma olhada nesses quizes incríveis que o pessoal da Imersão Alguma coisa fez:</p>
           </Widget.Content>
         </Widget>
         <Footer />
