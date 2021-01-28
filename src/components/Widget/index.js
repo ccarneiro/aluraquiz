@@ -33,4 +33,33 @@ Widget.Content = styled.div`
     padding: 0;
   }
 `;
+
+Widget.Topic = styled.a`
+  outline: 0;
+  text-decoration: none;
+  background-color: ${({ theme }) => `${theme.colors.primary}40`};
+  color: ${({ theme }) => theme.colors.contrastText};
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-radius: ${({ theme }) => theme.borderRadius};
+  transition: .3s;
+  display: block;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  & > input {
+    display: none;
+  }
+
+  & :checked {
+    ${Widget.Topic} & {
+      background-color: ${({ theme }) => theme.colors.secondary};
+    }
+  }
+`;
+
 export default Widget;

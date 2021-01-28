@@ -5,9 +5,12 @@ import { useRouter } from 'next/router';
 import db from '../db.json';
 import Widget from '../src/components/Widget';
 import Footer from '../src/components/Footer';
+import QuizContainer from '../src/components/QuizContainer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import QuizLogo from '../src/components/QuizLogo';
 import QuizBackground from '../src/components/QuizBackground';
+import Input from '../src/components/Input';
+import Button from '../src/components/Button';
 
 /*
 const Title = styled.h1`
@@ -23,29 +26,7 @@ export const BackgroundImage = styled.div`
   background-position: center;
 `;
 
-export const QuizContainer = styled.div`
-  width: 100%;
-  max-width: 350px;
-  padding-top: 45px;
-  margin: auto 10%;
-  @media screen and (max-width: 500px) {
-    margin: auto;
-    padding: 15px;
-  }
-  h1, h2, h3 {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1;
-    margin-bottom: 0;
-  }
-  p {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1;
-    text-align: justify;
-  }
-`;
-
+/*
 const Input = styled.input`
   width: 100%;
   height: 38px;
@@ -55,7 +36,9 @@ const Input = styled.input`
   border: solid 1px ${({ theme }) => theme.colors.contrastText};
   border-radius: ${({ theme }) => theme.borderRadius};
 `;
+*/
 
+/*
 const Button = styled.button`
   width: 100%;
   height: 36px;
@@ -69,6 +52,7 @@ const Button = styled.button`
     background-color: ${({ theme }) => theme.colors.primary};
   }
 `;
+*/
 
 export default function Home() {
   const router = useRouter();
@@ -87,27 +71,23 @@ export default function Home() {
               Teste os seus conhecimentos sobre o universoMarvel e
               divirta-se criando o seu AluraQuiz!
             </p>
-            <form onSubmit={function submitQuiz(event) {
+            <form onSubmit={(event) => {
               event.preventDefault();
               router.push(`/quiz?name=${name}`);
               console.log('Fazendo submissão por meio do React');
             }}
             >
               <Input
+                name="nomeDoUsuario"
                 placeholder="Entre com seu nome"
                 value={name}
-                // eslint-disable-next-line react/jsx-no-bind
-                onChange={function onInputChange(event) {
-                  setName(event.target.value);
-                }}
+                onChange={(event) => setName(event.target.value)}
               />
               <Button
                 type="submit"
                 disabled={!name}
               >
-                Jogar [
-                {name}
-                ]
+                {`Jogar ${name}`}
               </Button>
             </form>
           </Widget.Content>
