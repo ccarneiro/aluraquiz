@@ -9,6 +9,7 @@ import QuizLogo from '../src/components/QuizLogo';
 import QuizBackground from '../src/components/QuizBackground';
 // import Input from '../src/components/Input';
 import Button from '../src/components/Button';
+import Spinner from '../src/components/Spinner';
 
 function LoadingWidget() {
   return (
@@ -17,7 +18,7 @@ function LoadingWidget() {
         Carregando...
       </Widget.Header>
       <Widget.Content>
-        [Desafio do Loading]
+        <Spinner />
       </Widget.Content>
     </Widget>
   );
