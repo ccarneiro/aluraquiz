@@ -55,10 +55,8 @@ Widget.Topic = styled.a`
     display: none;
   }
 
-  & :checked {
-    ${Widget.Topic} & {
-      background-color: ${({ theme }) => theme.colors.secondary};
-    }
+  &.checked {
+    background-color: ${({ theme }) => `${theme.colors.secondary}70`};
   }
 `;
 
